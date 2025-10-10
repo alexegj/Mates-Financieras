@@ -5,4 +5,4 @@ format: html
 ---
 
 # Generales
-La presentación se encuentra en el siguiente [link]()
+La presentación se encuentra en el siguiente [link](https://alexegj.github.io/Mates-Financieras/Presentacion/ExpoCETES.html#/title-slide)
