@@ -1,0 +1,294 @@
+---
+title: "Presentación CETES"
+author: 
+- "Alejandro Emiliano Gaytán Jaramillo" 
+- "Samuel Gonzalez Benites"
+- "Alessandro Perez Piña"
+- "Jaime Patricio Guido Rivera"
+- "Mikel Augusto Marin Rodriguez"
+- "Cesar Emiliano Villalobos De La Miyar"
+format: 
+  revealjs:
+    background-image: "fondo.jpeg"
+    background-size: cover
+    background-opacity: 0.2
+    transition: convex
+    theme: simple
+    css: styles.css
+---
+## DESCRIPCIÓN TÉCNICA DE LOS CERTIFICADOS DE LA TESORERÍA DE LA FEDERACIÓN
+
+## Introducción
+
+Los Certificados de la Tesorería de la Federación (CETES) son el instrumento de deuda bursátil más antiguo emitido por Gobierno Federal. Se emitieron por primera vez en enero de 1978 y desde entonces constituyen un pilar fundamental en el desarrollo del mercado de dinero en México.
+<img src="umich.png" class="logo">
+
+## ¿Cuál es la mejor inversión para mí?
+
+:::: {.scrollable style="height:650px; overflow-y: scroll;"}
+
+
+Primero es importante conocer las características que pueden ayudar a tomar tus decisiones de inversión acorde a las necesidades y metas financieras de cada persona. Tienes que tomar en cuenta los siguientes factores:
+
+1. **Capacidad de ahorro:** Cuánto y con qué frecuencia puedo ahorrar.
+2. **Horizonte de inversión y edad:** El plazo de tiempo en que deseo retirar mi dinero conforme a mi edad y mis metas.
+3. **Objetivo de invertir:** Definir el uso que se hará de la inversión.
+4. **Conocimientos financieros:** Es importante entender todas las ventajas y consideraciones de nuestra inversión.
+5. **Necesidades de liquidez:** Necesitas considerar si podrías necesitar tus recursos antes de lo esperado.
+<img src="umich.png" class="logo">
+:::: 
+
+## Crea tu plan de inversión
+
+:::: {.scrollable style="height:650px; overflow-y: scroll;"}
+
+
+**Definir tu forma de invertir:**
+
+- **Capacidad de ahorro:** Para determinar tu capacidad de ahorro es necesario tener bien identificados tus ingresos y gastos en un periodo de tiempo.
+- **Horizonte de inversión y rentabilidad deseada:** Definir el plazo de tiempo en el cual necesitarás tus recursos, y cómo esperas recibir los rendimientos de tu inversión.
+
+Existen distintos plazos de inversión. Por ejemplo:
+
+- *Inmediato:* Ahorro disponible para alguna emergencia.
+- *Corto plazo:* Ahorro disponible para gastos recurrentes como pago de renta, servicios, etc.
+- *Mediano plazo:* Ahorro disponible para gastos programables como fiestas de cumpleaños, colegiaturas, etc.
+- *Largo plazo:* Ahorro disponible para planes de previsión como el retiro, prevenir gastos educativos, etc.
+<img src="umich.png" class="logo">
+::::
+
+## Metodología general para valuar los CETES
+
+:::: {.scrollable style="height:580px; overflow-y: scroll;"}
+
+
+El precio de un **CETE** se puede calcular a partir de su tasa de rendimiento o de una tasa de descuento, el precio final puede variar ligeramente en función del número de cifras decimales que se ocupen.
+
+### A partir de la tasa de rendimiento
+
+A partir de la *tasa de rendimiento*, el precio de un **CETE** se calcula utilizando la siguiente fórmula:
+
+$$
+P = \frac{VN}{1 + \frac{r \cdot t}{360}}
+$$
+
+**donde:**
+
+- $P$ = Precio del CETE (redondeado a 7 decimales)
+- $VN$ = Valor nominal del título en pesos
+- $r$ = Tasa de rendimiento
+- $t$ = Plazo en días del CETE
+<img src="umich.png" class="logo">
+::::
+
+## A partir de la Tasa de descuento
+
+:::: {.scrollable style="height:650px; overflow-y: scroll;"}
+
+
+Si $b$ es la *tasa de descuento* de un CETE se tiene que:
+
+$$
+b = \frac{r}{1 + \frac{r \cdot t}{360}}
+$$
+
+Despejando $r$ tenemos que:
+
+$$
+r = \frac{b}{1 - \frac{b \cdot t}{360}}
+$$
+
+Y sustituyendo la fórmula para calcular el precio de un CETE a partir de su tasa de descuento:
+
+$$
+P = VN \cdot \left(1 - \frac{b \cdot t}{360}\right)
+$$
+
+De la primera ecuación se desprende que el precio de los CETES está compuesto por un solo elemento: *El valor presente del principal (Valor Nominal)*.
+<img src="umich.png" class="logo">
+::::
+
+
+## Ejemplo Práctico
+
+:::: {.scrollable style="height:650px; overflow-y: scroll;"}
+
+
+**1.** El 31 de agosto de 2000 un inversionista compra CETES con las siguientes características:
+
+- **Valor Nominal:** 10.00 pesos
+- **Fecha de Colocación:** 31 de agosto de 2000
+- **Fecha de Vencimiento:** 28 de septiembre de 2000
+- **Días por vencer del título:** 28 días
+
+Supongamos que dicho inversionista adquiere los títulos a un rendimiento anual de 15.50%. Para calcular el precio al cual tendrá que liquidar la operación, el inversionista tiene dos opciones: a) calcular el valor presente del principal a través de la tasa de rendimiento y b) calcular el precio a partir de la "tasa de descuento" que proporcione este rendimiento.
+
+### a) Cálculo con rendimiento de 15.50%
+
+El precio de liquidación de cada título es:
+
+$$
+P = \frac{10}{\left(1 + \frac{0.1550 \times 28}{360}\right)} = \frac{10}{1.01205555556} = 9.8808805
+$$
+
+### b) Cálculo del descuento equivalente
+
+El descuento equivalente a un rendimiento de 15.50% es:
+
+$$
+b = \frac{0.1550}{1 + \frac{0.1550 \times 28}{360}} = \frac{0.1550}{1.01205555556} = 0.1532 = 15.32\%
+$$
+
+Con base en esta tasa de descuento (15.32%) se determina el precio al cual el inversionista tendrá que liquidar cada uno de los CETES que adquirió. Cabe señalar que es convención del mercado redondear a diezmilésimas las tasas de rendimiento y descuento, esto origina que el precio de un CETE calculado a partir del rendimiento difiera en algunos decimales del precio calculado a partir del descuento.
+
+$$
+P = 10^4 \left( 1 - \frac{0.1532 \times 28}{360} \right) = 10^4 \cdot 0.98808444 = 9.88088444
+$$
+<img src="umich.png" class="logo">
+:::: 
+
+## Términos que debes conocer
+
+:::: {.scrollable style="height:650px; overflow-y: scroll;"}
+
+
+- **Capital Invertido:** es la cantidad de dinero que destinas a la compra de instrumentos de inversión en cetes directo, desde \$100
+- **Plazo de vencimiento:** periodo de tiempo de un instrumento de inversión hasta que vence desde 28 a 30 años.
+- **Periodo de interés:** Es el periodo de tiempo entre una fecha de pago de interés y la siguiente. Los instrumentos disponibles en cetesdirecto pagan intereses en periodos regulares, es decir, siempre con la misma frecuencia (cada 28, 91 o 182 días). En cetesdirecto, tienes la posibilidad de reinvertir automáticamente los intereses que recibes.
+- **Valor nominal:** Es el valor de un instrumento de inversión, el cual sirve de referencia para calcular el monto de los intereses que paga. Ejemplo, el valor nominal de un cete es 10 pesos, el de un Bono a tasa nominal de 100 pesos y el de un Udibono de 100 UDIS.
+- **Valor de mercado:** Es el precio que tiene un instrumento de inversión, este depende, entre otros aspectos, del interés que pague y su plazo a vencimiento. El valor de mercado de un instrumento puede ser distinto a su valor nominal, independientemente del valor de mercado.
+- **UDIS:** Significa "Unidades de Inversión", y es una medida determinada y publicada por el Banco de México con base en el INPC del INEGI, a través de las cuales se puede medir la inflación de forma diaria.
+
+Cetesdirecto es una alternativa de inversión a través de instrumentos conocidos como "Bonos". A continuación, conoce los términos y las diferencias.
+
+- **Bono:** Es un instrumento de deuda (es decir, al comprarlo, estás prestando dinero al Gobierno), el cual paga intereses con una cierta frecuencia (periodo de interés) a una tasa que puede ser fija o variable durante el plazo del instrumento.
+- **Tasa de interés nominal:** Es el porcentaje que se traduce en un monto de dinero, mediante el cual se paga por el uso del dinero y con el que se calcula el pago de intereses que se anuncia cualquier inversión. Esta se encuentra ligada a un plazo anual.
+- **Tasa de interés real:** Es un porcentaje que se obtiene después de descontar a la tasa de interés nominal el efecto de la inflación en un periodo de tiempo, normalmente son positivas, lo que se traduce en que el rendimiento de la inversión fue superior al incremento en los precios.
+- **Tasa de rendimiento:** Es la rentabilidad de una inversión durante un determinado período de tiempo.
+
+Existen distintos tipos de bono los cuales poseen características que los diferencian unos de otros, en cetesdirecto, encontrarás los siguientes tipos de bonos:
+
+- **Bono cupón cero:** Son aquellos bonos que no pagan intereses intermedios, es decir entre la fecha de compra y su vencimiento, si no que al vencimiento te devuelven el valor nominal, el cual es mayor al monto invertido dado que se compran a descuento, la diferencia entre el precio de compra y el valor nominal es tu ganancia.
+- **Bono a tasa fija:** Este tipo de instrumentos pagan la misma tasa de interés desde su emisión hasta su vencimiento en cada periodo cupón.
+- **Bonos a tasa revisable:** También llamados de tasa flotante, estos bonos actualizan su tasa de interés con la que pagan en cada periodo de pago de cupón. Es decir que actualizan su valor de acuerdo a una tasa de referencia, por ejemplo, la tasa de fondeo bancario, gubernamental, o de Cetes, con las condiciones vigentes del mercado.
+- **Bonos con protección contra la inflación:** Los bonos con protección contra la inflación cuentan con mecanismos para que tus recursos no se vean afectados en periodos en que la inflación pueda ser alta.
+<img src="umich.png" class="logo">
+::::
+
+## Tipos de inversión
+
+:::: {.scrollable style="height:650px; overflow-y: scroll;"}
+
+
+### Conservadora
+
+1. Tiene un monto de ahorro fijo y objetivos a corto plazo.
+2. Prefiere productos con liquidez inmediata y estabilidad en los rendimientos.
+3. Se enfoca en cubrir gastos básicos, emergencias o pagos programados.
+
+### Moderada
+
+4. Cuenta con mayor capacidad de ahorro y no requiere disponer de su dinero de forma inmediata.
+5. Acepta movimientos moderados en los rendimientos para incrementar sus ganancias.
+6. Sus metas son de mediano y largo plazo, como educación o ahorro para el retiro.
+
+### Audaz
+
+7. Dispone de flexibilidad y solvencia para invertir en diferentes instrumentos y plazos.
+8. Diversifica su portafolio y tolera variaciones en el valor de sus inversiones con el fin de obtener mayores rendimientos.
+9. Estas fluctuaciones no afectan sus gastos básicos ni compromisos financieros.
+<img src="umich.png" class="logo">
+::::
+
+## Ejemplo: Alberto
+
+:::: {.scrollable style="height:670px; overflow-y: scroll;"}
+
+
+Alberto, padre de familia, busca ahorrar para la educación de sus hijos, cubrir las colegiaturas mensuales y realizar arreglos en su casa en algunos años. Aunque ya destina dinero a estos fines, desea aumentar el rendimiento de su ahorro.
+
+1. **Colegiaturas (mensual):** invierte en Cetes de corto plazo, lo que le permite generar intereses y contar con liquidez para pagar mes a mes.
+2. **Arreglos en casa (3 años):** ahorra en Bondes F a 3 años; a medida que se acerca el plazo, complementa con instrumentos de 1 año. Los intereses recibidos los reinvierte para incrementar su capital.
+3. **Educación preparatoria (7 años):** cada año destina parte de su aguinaldo a bonos BPA182, que ajustan su rendimiento con la inflación, protegiendo así el valor real de sus ahorros a largo plazo.
+<img src="umich.png" class="logo">
+::::
+
+## Ideas de inversión con CETES
+
+:::: {.scrollable style="height:670px; overflow-y: scroll;"}
+
+
+### Corto Plazo (1 día - 1 año)
+
+- Ejemplo: **CETES 28, 91, 182 días**
+- Usos: renta, servicios, gastos médicos.
+- Rendimiento: **6.8% – 7.6%**
+- Beneficio: liquidez rápida y segura.
+
+### Mediano Plazo (1 – 5 años)
+
+- Ejemplo: **CETES 364 días, Bonos a 3 y 5 años, Udibonos**
+- Usos: colegiaturas, proyectos, compras grandes.
+- Rendimiento: **7.0% – 9.0%**
+- Beneficio: objetivos anuales o de mayor costo.
+
+### Largo Plazo (10 – 30 años)
+
+- Ejemplo: **Bonos y Udibonos a 10, 20 o 30 años**
+- Usos: retiro, vivienda, independencia.
+- Rendimiento: **3.6% – 8.4%**
+- Beneficio: crecimiento patrimonial.
+<img src="umich.png" class="logo">
+::::
+---
+
+## Qué pasa si tengo un imprevisto?
+
+
+
+- Puedes **vender antes del vencimiento** en **Cetesdirecto**.
+- La venta se hace al **precio del mercado** (puede ser mayor o menor).
+- Siempre recibes intereses acumulados hasta el momento.
+- Recomendación: **diversificar** en corto, mediano y largo plazo.
+<img src="umich.png" class="logo">
+---
+
+## Ahorro recurrente a plazo
+
+- Puedes invertir **mensual, trimestral o semestralmente**.
+- Clave: **reinvertir los rendimientos** para crecer más rápido.
+- Ejemplo: \$1,000 al mes → crecimiento importante a largo plazo.
+- Beneficio: alcanzar metas financieras (auto, casa, retiro).
+<img src="umich.png" class="logo">
+---
+
+
+## Maximizar rendimientos en cetesdirecto
+
+1. Invertir a largo plazo ofrece un beneficio extra en la tasa de interés conocido como "premio por plazo".
+2. Los instrumentos a tasa variable en México también incluyen un premio, protegiendo al inversionista frente a la inflación.
+3. Gráficas muestran que invertir de manera constante a largo plazo genera mayores rendimientos que hacerlo solo a corto plazo.
+<img src="umich.png" class="logo">
+
+## Metas a largo plazo
+
+1. Al invertir, es importante considerar el impacto de la inflación.
+2. Productos destacados de cetesdirecto:
+3. BPA182: paga intereses semestrales; la tasa se actualiza según la inflación.
+4. UDIBONO: está en UDIs (Unidades de Inversión), protege tu dinero porque se ajusta con la inflación.
+5. Ambos productos ayudan a mantener y hacer crecer el valor real del dinero frente a la inflación.
+<img src="umich.png" class="logo">
+
+## Instrumentos de inversión de largo plazo
+
+1. Estrategia ideal: usar instrumentos cuyo plazo coincida con tu meta de ahorro.
+2. Ejemplo: ahorrar \$10,000 desde 2016 habría generado más de \$14,000 en 2022 con bonos del gobierno.
+3. El mensaje central: ahorrar e invertir a largo plazo permite alcanzar metas financieras con menos esfuerzo y sin perder valor frente a la inflación.
+<img src="umich.png" class="logo">
+
+## Conclusión
+
+- Los **CETES** son una inversión **segura**, respaldada por el Gobierno de México.
+- Sirven tanto para **ahorro de corto plazo** como para proyectos a futuro.
+- Al reinvertir rendimientos y diversificar plazos → **crece tu patrimonio y te preparas ante imprevistos**.
+<img src="umich.png" class="logo">
