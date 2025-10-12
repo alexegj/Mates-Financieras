@@ -5,4 +5,6 @@ format: html
 ---
 
 # Generales
-La presentación se encuentra en el siguiente [link](https://alexegj.github.io/Mates-Financieras/Presentacion/ExpoCETES.html#/title-slide)
+El archivo qmd se encuentra en el siguiente [link](https://alexegj.github.io/Mates-Financieras/FuncionesIS/FuncionesDeInteresSimple.html)
+
+El archivo pdf se encuentra en el siguiente [link](https://alexegj.github.io/Mates-Financieras/https://alexegj.github.io/Mates-Financieras/FuncionesIS/FuncionesDeInteresSimple.pdf)
