@@ -5,6 +5,8 @@ format: html
 ---
 
 # Generales
-El archivo qmd se encuentra en el siguiente [link](https://alexegj.github.io/Mates-Financieras/FuncionesIS/FuncionesDeInteresSimple.html)
+El archivo html se encuentra en el siguiente [link](https://alexegj.github.io/Mates-Financieras/FuncionesIS/FuncionesDeInteresSimple.html)
 
 El archivo pdf se encuentra en el siguiente [link](https://alexegj.github.io/Mates-Financieras/FuncionesIS/FuncionesDeInteresSimple.pdf)
+
+El archivo qmd se encuentra en el siguiente [link](https://alexegj.github.io/Mates-Financieras/FuncionesIS/FuncionesDeInteresSimple.qmd)
