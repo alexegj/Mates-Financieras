@@ -13,3 +13,10 @@ El archivo qmd se encuentra en el siguiente [link](https://alexegj.github.io/Mat
 
 # Presentación CETES
 El archivo html se encuentra en el siguiente [link](https://alexegj.github.io/Mates-Financieras/Presentacion/ExpoCETES.html)
+
+# Ej. Interés Compuesto
+El archivo html se encuentra en el siguiente [link](https://alexegj.github.io/Mates-Financieras/FuncionesIC/FuncionesDeInteresCompuesto.html)
+
+El archivo pdf se encuentra en el siguiente [link](https://alexegj.github.io/Mates-Financieras/FuncionesIC/FuncionesDeInteresCompuesto.pdf)
+
+El archivo qmd se encuentra en el siguiente [link](https://alexegj.github.io/Mates-Financieras/FuncionesIC/FuncionesDeInteresCompuesto.qmd)
