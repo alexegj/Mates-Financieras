@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>Funciones de Interés Compuesto</title>
+<title>Funciones de interés simple</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -84,7 +84,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <header id="title-block-header" class="quarto-title-block default page-columns page-full">
   <div class="quarto-title-banner page-columns page-full">
     <div class="quarto-title column-body">
-      <h1 class="title">Funciones de Interés Compuesto</h1>
+      <h1 class="title">Funciones de interés simple</h1>
                       </div>
   </div>
     
@@ -121,10 +121,10 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p><img src="umich.png" class="img-fluid quarto-figure quarto-figure-center figure-img" width="150"></p>
 </figure>
 </div>
-<p>Lo primero que necesitaremos será crear las diferentes funciones para el interes compuesto: 1. Valor futuro</p>
+<p>Lo primero que necesitaremos será crear las diferentes funciones para el interes simple: 1. Valor futuro</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>InteresCompuestoVF <span class="ot">=</span> <span class="cf">function</span>(va, r, n){</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  VF <span class="ot">=</span> va<span class="sc">*</span>(<span class="dv">1</span> <span class="sc">+</span> r) <span class="sc">^</span> n </span>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>InteresSimpleVF <span class="ot">=</span> <span class="cf">function</span>(va, r, n){</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  VF <span class="ot">=</span> va<span class="sc">*</span>(<span class="dv">1</span> <span class="sc">+</span> r<span class="sc">*</span>n)</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(VF)</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -132,8 +132,8 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Valor actual</li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>InteresCompuestoVA <span class="ot">=</span> <span class="cf">function</span>(vf, r, n){</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  VA <span class="ot">=</span> vf<span class="sc">/</span>(<span class="dv">1</span> <span class="sc">+</span> r) <span class="sc">^</span> n</span>
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>InteresSimpleVA <span class="ot">=</span> <span class="cf">function</span>(vf, r, n){</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>  VA <span class="ot">=</span> vf<span class="sc">/</span>(<span class="dv">1</span> <span class="sc">+</span> r<span class="sc">*</span>n)</span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(VA)</span>
 <span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
@@ -141,37 +141,37 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <li>Tasa de interes</li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>InteresCompuestoTasa <span class="ot">=</span> <span class="cf">function</span>(vf, va, n){</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  r <span class="ot">=</span> ((vf<span class="sc">/</span>va) <span class="sc">^</span> (<span class="dv">1</span><span class="sc">/</span>n)) <span class="sc">-</span> <span class="dv">1</span></span>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>InteresSimpleTasa <span class="ot">=</span> <span class="cf">function</span>(vf, va, n){</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  r <span class="ot">=</span> ((vf<span class="sc">/</span>va) <span class="sc">-</span> <span class="dv">1</span>)<span class="sc">/</span>n</span>
 <span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(r)</span>
 <span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <ol start="4" type="1">
-<li>Número de Periodos</li>
+<li>Número de periodos</li>
 </ol>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>InteresCompuestoNPer <span class="ot">=</span> <span class="cf">function</span>(vf, va, r){</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  n <span class="ot">=</span> <span class="fu">log</span>(vf<span class="sc">/</span>va)<span class="sc">/</span><span class="fu">log</span>(<span class="dv">1</span> <span class="sc">+</span> r)</span>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>InteresSimpleNPer <span class="ot">=</span> <span class="cf">function</span>(vf, va, r){</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  n <span class="ot">=</span> ((vf<span class="sc">/</span>va) <span class="sc">-</span> <span class="dv">1</span>)<span class="sc">/</span>r</span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">return</span>(n)</span>
 <span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>Ahora lo que necesitamos es hacer una función (InteresCompuesto) en la que al no asignar un valor en cualquier espacio (va, vf, n o r) la funcion va a saber cual de las funciones anteriores tiene que tomar para darte un resultado.</p>
+<p>Ahora lo que necesitamos es hacer una función (InteresSimpleS) en la que al no asignar un valor en cualquier espacio (va, vf, n o r) la funcion va a saber cual de las funciones anteriores tiene que tomar para darte un resultado.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>InteresCompuesto <span class="ot">=</span> <span class="cf">function</span>(<span class="at">vf =</span> <span class="cn">NA</span>, <span class="at">va =</span> <span class="cn">NA</span>, <span class="at">r =</span> <span class="cn">NA</span>, <span class="at">n =</span> <span class="cn">NA</span>){</span>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>InteresSimpleS <span class="ot">=</span> <span class="cf">function</span>(<span class="at">vf =</span> <span class="cn">NA</span>, <span class="at">va =</span> <span class="cn">NA</span>, <span class="at">r =</span> <span class="cn">NA</span>, <span class="at">n =</span> <span class="cn">NA</span>){</span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span> (<span class="fu">is.na</span>(vf)){</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    resultado <span class="ot">=</span> <span class="fu">InteresCompuestoVF</span>(va, r, n)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>    resultado <span class="ot">=</span> <span class="fu">InteresSimpleVF</span>(va, r, n)</span>
 <span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(resultado)</span>
 <span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cf">if</span> (<span class="fu">is.na</span>(va)){</span>
-<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    resultado <span class="ot">=</span> <span class="fu">InteresCompuestoVA</span>(vf, r, n)</span>
+<span id="cb5-7"><a href="#cb5-7" aria-hidden="true" tabindex="-1"></a>    resultado <span class="ot">=</span> <span class="fu">InteresSimpleVA</span>(vf, r, n)</span>
 <span id="cb5-8"><a href="#cb5-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(resultado)</span>
 <span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb5-10"><a href="#cb5-10" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cf">if</span> (<span class="fu">is.na</span>(r)){</span>
-<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    resultado <span class="ot">=</span> <span class="fu">InteresCompuestoTasa</span>(vf, va, n)</span>
+<span id="cb5-11"><a href="#cb5-11" aria-hidden="true" tabindex="-1"></a>    resultado <span class="ot">=</span> <span class="fu">InteresSimpleTasa</span>(vf, va, n)</span>
 <span id="cb5-12"><a href="#cb5-12" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(resultado)</span>
 <span id="cb5-13"><a href="#cb5-13" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb5-14"><a href="#cb5-14" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> <span class="cf">if</span> (<span class="fu">is.na</span>(n)){</span>
-<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    resultado <span class="ot">=</span> <span class="fu">InteresCompuestoNPer</span>(vf, va, r)</span>
+<span id="cb5-15"><a href="#cb5-15" aria-hidden="true" tabindex="-1"></a>    resultado <span class="ot">=</span> <span class="fu">InteresSimpleNPer</span>(vf, va, r)</span>
 <span id="cb5-16"><a href="#cb5-16" aria-hidden="true" tabindex="-1"></a>    <span class="fu">return</span>(resultado)</span>
 <span id="cb5-17"><a href="#cb5-17" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb5-18"><a href="#cb5-18" aria-hidden="true" tabindex="-1"></a>  } <span class="cf">else</span> {</span>
@@ -182,30 +182,30 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <p>Y asi, al llamar a la función “InteresSimpleS”, la función va a llamar a alguna de las otras cuatro dependiendo el valor faltante (NA).</p>
 <p>Por ejemplo:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">InteresCompuesto</span>(<span class="at">vf =</span> <span class="cn">NA</span>, <span class="at">va =</span> <span class="dv">10000</span>, <span class="at">r =</span> <span class="fl">0.01025</span>, <span class="at">n =</span> <span class="dv">37</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">InteresSimpleS</span>(<span class="at">vf =</span> <span class="cn">NA</span>, <span class="at">va =</span> <span class="dv">1000</span>, <span class="at">r =</span> <span class="fl">0.05</span>, <span class="at">n =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 14583.7</code></pre>
+<pre><code>[1] 1100</code></pre>
 </div>
 </div>
 <p>Ejemplo 2:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">InteresCompuesto</span>(<span class="at">vf =</span> <span class="dv">1000000</span>, <span class="at">va =</span> <span class="cn">NA</span>, <span class="at">r =</span> <span class="fl">0.003958</span>, <span class="at">n =</span> <span class="dv">360</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">InteresSimpleS</span>(<span class="at">vf =</span> <span class="dv">1100</span>, <span class="at">va =</span> <span class="dv">1000</span>, <span class="at">r =</span> <span class="fl">0.05</span>, <span class="at">n =</span> <span class="cn">NA</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 241214.8</code></pre>
+<pre><code>[1] 2</code></pre>
 </div>
 </div>
 <p>Ejemplo 3:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">InteresCompuesto</span>(<span class="at">vf =</span> <span class="dv">1000000</span>, <span class="at">va =</span> <span class="dv">100000</span>, <span class="at">r =</span> <span class="cn">NA</span>, <span class="at">n =</span> <span class="dv">360</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">InteresSimpleS</span>(<span class="at">vf =</span> <span class="dv">1100</span>, <span class="at">va =</span> <span class="dv">1000</span>, <span class="at">r =</span> <span class="cn">NA</span>, <span class="at">n =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 0.006416568</code></pre>
+<pre><code>[1] 0.05</code></pre>
 </div>
 </div>
 <p>Ejemplo 4:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">InteresCompuesto</span>(<span class="at">vf =</span> <span class="dv">2000</span>, <span class="at">va =</span> <span class="fl">1019.17</span>, <span class="at">r =</span> <span class="fl">0.0167</span>, <span class="at">n =</span> <span class="cn">NA</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">InteresSimpleS</span>(<span class="at">vf =</span> <span class="dv">1100</span>, <span class="at">va =</span> <span class="cn">NA</span>, <span class="at">r =</span> <span class="fl">0.05</span>, <span class="at">n =</span> <span class="dv">2</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] 40.70493</code></pre>
+<pre><code>[1] 1000</code></pre>
 </div>
 </div>
 

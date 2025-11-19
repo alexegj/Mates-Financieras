@@ -1,5 +1,5 @@
 ---
-title: "Funciones de Interés Compuesto"
+title: "Funciones de interés simple"
 authors:  
 - "Alejandro Emiliano Gaytan Jaramillo, 2408822k@umich.mx (UMSNH)"
 - "Alessandro Perez Piña, 2408821b@umich.mx (UMSNH)"
@@ -16,12 +16,12 @@ format:
 ---
 ![](umich.png){fig-align="center" width="150px"}
 
-Lo primero que necesitaremos será crear las diferentes funciones para el interes compuesto:
+Lo primero que necesitaremos será crear las diferentes funciones para el interes simple:
 1. Valor futuro
 
 ```{r}
-InteresCompuestoVF = function(va, r, n){
-  VF = va*(1 + r) ^ n 
+InteresSimpleVF = function(va, r, n){
+  VF = va*(1 + r*n)
   return(VF)
 }
 ```
@@ -29,8 +29,8 @@ InteresCompuestoVF = function(va, r, n){
 2. Valor actual
 
 ```{r}
-InteresCompuestoVA = function(vf, r, n){
-  VA = vf/(1 + r) ^ n
+InteresSimpleVA = function(vf, r, n){
+  VA = vf/(1 + r*n)
   return(VA)
 }
 ```
@@ -38,39 +38,39 @@ InteresCompuestoVA = function(vf, r, n){
 3. Tasa de interes
 
 ```{r}
-InteresCompuestoTasa = function(vf, va, n){
-  r = ((vf/va) ^ (1/n)) - 1
+InteresSimpleTasa = function(vf, va, n){
+  r = ((vf/va) - 1)/n
   return(r)
 }
 ```
 
-4. Número de Periodos
+4. Número de periodos
 
 ```{r}
-InteresCompuestoNPer = function(vf, va, r){
-  n = log(vf/va)/log(1 + r)
+InteresSimpleNPer = function(vf, va, r){
+  n = ((vf/va) - 1)/r
   return(n)
 }
 ```
 
-Ahora lo que necesitamos es hacer una función (InteresCompuesto) en la que al no asignar un valor en cualquier espacio (va, vf, n o r) la funcion va a saber cual de las funciones anteriores tiene que tomar para darte un resultado.
+Ahora lo que necesitamos es hacer una función (InteresSimpleS) en la que al no asignar un valor en cualquier espacio (va, vf, n o r) la funcion va a saber cual de las funciones anteriores tiene que tomar para darte un resultado.
 
 ```{r}
-InteresCompuesto = function(vf = NA, va = NA, r = NA, n = NA){
+InteresSimpleS = function(vf = NA, va = NA, r = NA, n = NA){
   if (is.na(vf)){
-    resultado = InteresCompuestoVF(va, r, n)
+    resultado = InteresSimpleVF(va, r, n)
     return(resultado)
     
   } else if (is.na(va)){
-    resultado = InteresCompuestoVA(vf, r, n)
+    resultado = InteresSimpleVA(vf, r, n)
     return(resultado)
     
   } else if (is.na(r)){
-    resultado = InteresCompuestoTasa(vf, va, n)
+    resultado = InteresSimpleTasa(vf, va, n)
     return(resultado)
     
   } else if (is.na(n)){
-    resultado = InteresCompuestoNPer(vf, va, r)
+    resultado = InteresSimpleNPer(vf, va, r)
     return(resultado)
     
   } else {
@@ -83,19 +83,19 @@ Y asi, al llamar a la función "InteresSimpleS", la función va a llamar a algun
 
 Por ejemplo:
 ```{r}
-InteresCompuesto(vf = NA, va = 10000, r = 0.01025, n = 37)
+InteresSimpleS(vf = NA, va = 1000, r = 0.05, n = 2)
 ```
 Ejemplo 2:
 ```{r}
-InteresCompuesto(vf = 1000000, va = NA, r = 0.003958, n = 360)
+InteresSimpleS(vf = 1100, va = 1000, r = 0.05, n = NA)
 ```
 Ejemplo 3:
 ```{r}
-InteresCompuesto(vf = 1000000, va = 100000, r = NA, n = 360)
+InteresSimpleS(vf = 1100, va = 1000, r = NA, n = 2)
 ```
 Ejemplo 4:
 ```{r}
-InteresCompuesto(vf = 2000, va = 1019.17, r = 0.0167, n = NA)
+InteresSimpleS(vf = 1100, va = NA, r = 0.05, n = 2)
 ```
 
 
