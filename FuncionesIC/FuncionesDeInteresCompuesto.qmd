@@ -87,7 +87,7 @@ InteresCompuesto(vf = NA, va = 10000, r = 0.01025, n = 37)
 ```
 Ejemplo 2:
 ```{r}
-InteresCompuesto(vf = 1000000, va = NA, r = 0.003958, n = 360)
+InteresCompuesto(vf = 1000000, va = NA, r = 0.0039583, n = 360)
 ```
 Ejemplo 3:
 ```{r}
