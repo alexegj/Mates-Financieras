@@ -23,9 +23,12 @@ format:
 En esta presentación hablaremos sobre las tablas de depreciación, que son herramientas que nos ayudan a entender cómo un activo, como una máquina o un vehículo, va perdiendo valor con el paso de los años.
 Este desgaste sucede porque los objetos se usan, se deterioran o se vuelven obsoletos. Las tablas de depreciación permiten registrar esa pérdida de valor de manera clara y ordenada.
 
-A lo largo de la presentación veremos qué son estas tablas, por qué son importantes, los métodos que se utilizan para calcular la depreciación, un ejemplo práctico y algunas de sus aplicaciones en las empresas.
+ A lo largo de la presentación veremos qué son estas tablas, por qué son importantes, los métodos que se utilizan para calcular la depreciación, un ejemplo práctico y algunas de sus aplicaciones en las empresas.
+
+![](diapositiva1.jpg){width=300px}
+
 <img src="umich.png" class="logo">
-#poner una imagen
+
 
 :::: 
 
@@ -47,7 +50,8 @@ Además ayudan a llevar un mejor control interno, planear presupuestos, cumplir 
 - Organizan la información de forma clara
 - Ayudan a cumplir obligaciones fiscales
 - Facilitan la toma de decisiones
-#otra imagen
+
+![](diapositiva2.jpg){width=450px}
 <img src="umich.png" class="logo">
 
 
@@ -62,24 +66,23 @@ También existen métodos acelerados, que sirven para activos que pierden más v
 Y por último tenemos el método de unidades de producción, que se basa en cuánto se usa el activo, ideal para maquinaria.
 
 - **Método lineal:** El activo baja el mismo valor cada año.
-```{r}
-#poner la formula
-```
-
-_ **Método de suma de dígitos (acelerado):** El activo pierde más valor al inicio y menos al final.
-```{r}
-#otra formula
-```
-
+$$
+\text{Depreciacion anual} = \frac{\text{Costo del activo} - \text{Valor residual}}{\text{Vida útil}}
+$$
+- **Método de suma de dígitos (acelerado):** El activo pierde más valor al inicio y menos al final.
+$$
+\text{Suma de dígitos} = 1 + 2 + \dots + n = \frac{n(n+1)}{2}
+$$
 - **Método de doble saldo decreciente:** Depreciación muy rápida al inicio, usando una tasa más alta.
-```{r}
-#otra formula
-```
-
+$$
+\text{Depreciación en el año } 
+= \text{Valor en libros} * \frac{2}{\text{Vida util}}
+$$
 - **Método por unidades de producción:** La depreciación depende del uso real del activo.
-```{r}
-#otra formula
-```
+$$
+\text{Depreciacion anual} 
+= \text{Unidades del año} * \text{Depreciacion por unidad}
+$$
 <img src="umich.png" class="logo">
 :::: 
 
@@ -95,14 +98,9 @@ La tabla muestra claramente tres cosas:
 1. La cantidad que se deprecia cada año.
 2. Lo que se ha depreciado en total hasta ese momento.
 3. El valor que le queda al activo después de cada año.
-#poner la tabla que descargué
+![](diapositiva5.jpeg){width=1000px}
 <img src="umich.png" class="logo">
 
-#explicación sugerida: “El activo inicia valiendo 1,000,000.”
-#“Cada año se le resta 200,000, que es su depreciación anual.”
-#“La depreciación acumulada muestra lo que ha perdido en total.”
-#“El valor neto en libros representa lo que vale el activo en ese año.”
-#“Al terminar el quinto año, el activo ha perdido todo su valor en libros.”
 
 :::: 
 
@@ -126,7 +124,8 @@ También sirven para decidir si conviene reparar una máquina o comprar una nuev
 - Planeación de inversiones
 - Control de activos
 - Elaboración de estados financieros
-#poner imagen
+
+![](diapositiva6.avif){width=250px}
 <img src="umich.png" class="logo">
 ::::
 
@@ -138,7 +137,7 @@ En conclusión, las tablas de depreciación permiten ver de forma clara y ordena
 
 Comprender estos conceptos es fundamental para quienes estudian contabilidad, administración o finanzas, ya que son parte esencial de la operación de cualquier empresa.
 Esperamos que esta presentación haya ayudado a entender mejor cómo funcionan las tablas de depreciación y por qué son tan importantes.
-#poner otra imagen
+![](diapositiva7.jpg){width=700px}
 <img src="umich.png" class="logo">
 :::: 
 

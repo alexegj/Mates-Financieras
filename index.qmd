@@ -20,3 +20,7 @@ El archivo html se encuentra en el siguiente [link](https://alexegj.github.io/Ma
 El archivo pdf se encuentra en el siguiente [link](https://alexegj.github.io/Mates-Financieras/FuncionesIC/FuncionesDeInteresCompuesto.pdf)
 
 El archivo qmd se encuentra en el siguiente [link](https://alexegj.github.io/Mates-Financieras/FuncionesIC/FuncionesDeInteresCompuesto.qmd)
+
+# Presentación Tablas de depreciación:
+El archivo html se encuentra en el siguiente
+[link](https://alexegj.github.io/Mates-Financieras/Expo2/Expotablasdedepreciacion.html)
